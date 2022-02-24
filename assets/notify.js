@@ -62,7 +62,7 @@
     function valPhone() {
         $('input[name="phone"]').inputFilter(function(value) {
             if (_opt.lang === 'vi') return /^[0-9]{0,12}$/.test(value);
-            return /^[0-9]{3,11}$/.test(value);
+            return /^[0-9]{0,4}$/.test(value);
         });
         $('input[name="phone"]').keyup(function(ev) {
             if (ev.target.value.length === 12 && _opt.lang === 'vi') createPhone(ev.target.value)
