@@ -241,7 +241,6 @@
         var address = form.find('textarea[name="address"], select[name="address"], input[name="address"]');
         var rephone = /^(84|0[9|8|7|5|3])+([0-9]{8})$/;
         if (!phone.val().trim() || phone.val().trim().length < 10) {
-            console.log(phone.val().trim().length);
             show_form_hint(phone, locale[_opt.lang]['p_r']);
             return ev.preventDefault();
         } else
